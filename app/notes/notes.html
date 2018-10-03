@@ -1,0 +1,19 @@
+<div>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Text</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr ng-repeat="note in notes">
+      <td>{{::note.id}}</td>
+      <td>{{::note.title}}</td>
+      <td>{{::note.text}}</td>
+      <td><button ng-click="go('/' + customerId + '/noteDetails', note)">Open</button></td>
+      <td><button ng-click="deleteNote(note)">Delete</button></td>
+    </tr>
+  </table>
+  <button style="width: 100%;color: green" ng-click="go('/' + customerId + '/noteDetails')">Add</button>
+</div>

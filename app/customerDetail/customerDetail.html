@@ -1,0 +1,45 @@
+<div class="customer-detail">
+    <div class="customer-info">
+        <div class="customer-info-name">ID</div>
+        <div class="customer-info-value">{{::customer.id}}</div>
+    </div>
+
+    <div class="customer-info">
+        <div class="customer-info-name">Date</div>
+        <div class="customer-info-value">{{::customer.createTimestamp}}</div>
+    </div>
+
+    <div class="customer-info">
+        <div class="customer-info-name">Name</div>
+        <div class="customer-info-value">
+            <input type="text" ng-model="customer.name">
+        </div>
+    </div>
+
+    <div class="customer-info">
+        <div class="customer-info-name">Phone</div>
+        <div class="customer-info-value">
+            <input type="text" ng-model="customer.phone">
+        </div>
+    </div>
+
+    <div class="customer-info">
+        <div class="customer-info-name">Email</div>
+        <div class="customer-info-value">
+            <input type="text" ng-model="customer.email">
+        </div>
+    </div>
+
+    <div class="customer-info">
+        <div class="customer-info-name">Status</div>
+        <div class="customer-info-value">
+            <select name="status" ng-model="customer.status" id="status">
+                <option value="ACTIVE">Current</option>
+                <option value="PROSPECTIVE" selected>Prospective</option>
+                <option value="DISABLED">Non-active</option>
+            </select>
+        </div>
+    </div>
+
+    <button ng-click="saveCustomer()">Save</button>
+</div>

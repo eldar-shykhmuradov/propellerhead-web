@@ -1,0 +1,61 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+
+
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 5px 10px;
+  text-align: left;
+}
+
+
+tr:nth-child(2n) {
+  background: #eee;
+}
+
+.note-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-detail {
+  padding: 15px;
+}
+
+.customer-info {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.customer-info-name {
+  min-width: 150px;
+  padding-right: 15px;
+}
