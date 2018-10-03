@@ -1,3 +1,5 @@
+<div ng-if="errorText" class="error-text">{{errorText}}</div>
+
 <div class="note-detail">
     <input type="text" ng-model="note.title" class="note-title">
     <textarea name="text" ng-model="note.text" id="text" cols="30" rows="10" class="note-text"></textarea>

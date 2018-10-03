@@ -12,6 +12,9 @@ angular.module('myApp.noteDetail', ['ngRoute'])
 .controller('NoteDetailCtrl', function($scope, $http, $location, $routeParams, noteService) {
     $scope.customerId = $routeParams.customerId;
     $scope.note = noteService.getNote();
+    $scope.errorText = null;
+    var VALIDATION_ERROR_CODE = 3;
+
 
     $scope.saveNote = function () {
         let method = noteService.getNote() ? "PUT" : "POST";
@@ -24,7 +27,11 @@ angular.module('myApp.noteDetail', ['ngRoute'])
         }).then(function mySuccess() {
             $location.path('/customers/' + $scope.customerId+ '/notes');
         }, function myError(response) {
-            $scope.myWelcome = response.statusText;
+            if (response.data.errorCode === VALIDATION_ERROR_CODE) {
+                $scope.errorText = "Validation error :( Unfortunately, You can see it only in console because front-end part of this project was done in hard condition and short period, sorry"
+            } else {
+                $scope.errorText = response.data.message;
+            }
         });
     };
 
