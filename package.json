@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
-  "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "name": "elcus-web",
+  "private": false,
+  "version": "1.0.0",
+  "description": "Front-end part of the propellerhead test project",
+  "repository": "https://github.com/eldar-shykhmuradov/propellerhead-web",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
